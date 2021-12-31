@@ -11,7 +11,7 @@ class ListAllUsersController {
       const users = this.listAllUsersUseCase.execute({ user_id });
       return response.json(users);
     } catch (error) {
-      return response.status(error.status).json(error);
+      return response.status(error.status).json({ error });
     }
   }
 }

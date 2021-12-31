@@ -13,7 +13,7 @@ class TurnUserAdminUseCase {
     const existsUser = this.usersRepository.findById(user_id);
 
     if (!existsUser) {
-      throw new ApiError(400, "Users doesn't exists");
+      throw new ApiError(404, "Users doesn't exists");
     }
 
     return this.usersRepository.turnAdmin(existsUser);

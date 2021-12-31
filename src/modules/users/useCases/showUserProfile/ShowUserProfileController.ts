@@ -12,7 +12,7 @@ class ShowUserProfileController {
 
       return response.json(user);
     } catch (error) {
-      return response.status(error.status).json(error);
+      return response.status(error.status).json({ error });
     }
   }
 }
